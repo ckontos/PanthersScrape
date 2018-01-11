@@ -66,3 +66,17 @@ $("#viewSavedArticles").on("click", function() {
         }
     });
 });
+
+$("#deleteArticle").on("click", function() {
+    var thisId = $(this).attr("data-id");
+
+    // POST ajax call
+    $.ajax({
+            method: "POST",
+            url: "/deleteSaved/" + thisId,
+        })
+
+        .done(function(data) {
+            location.reload();
+        });
+});
