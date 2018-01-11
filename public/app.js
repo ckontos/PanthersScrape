@@ -9,19 +9,6 @@ function getArticles() {
 
 getArticles();
 
-// click function for saving article
-$(document).on("click", ".saveArticle", function() {
-
-    var thisId = $(this).attr("data-id");
-
-    $.ajax({
-            method: "POST",
-            url: "/saved/" + thisId,
-        })
-        .done(function(data) {
-            console.log("article saved: " + data);
-        });
-});
 
 // click handler for scrape button
 $("#scrapeWeb").on("click", function() {
@@ -63,6 +50,20 @@ $("#viewSavedArticles").on("click", function() {
             $("#savedArticles").append("<div class='panel panel-default'><div class='panel-heading'> <p data-id='" + data[i]._id + "'>" + data[i].title + "<button class='pull-right viewNotes' type='button' data-target='#noteModal' data-toggle='modal' data-id='" + data[i]._id + "'>" + "View Notes" + "</button>" + "<button class='pull-right deleteArticle' data-id='" + data[i]._id + "'>Delete Article</button></p></div>" + "<div class='panel-body'><a href='" + data[i].link + "'>Link to Article</a>");
         }
     });
+});
+
+// click function for saving article
+$(document).on("click", ".saveArticle", function() {
+
+    var thisId = $(this).attr("data-id");
+
+    $.ajax({
+            method: "POST",
+            url: "/saved/" + thisId,
+        })
+        .done(function(data) {
+            console.log("article saved: " + data);
+        });
 });
 
 // click handler for deleting article on saved page.
