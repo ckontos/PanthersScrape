@@ -64,16 +64,45 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div class="row">
         <div class="jumbotron">
             <h1>Carolina Panthers News Scraper</h1>
-            <a href="/scrape">
-            <button type="submit" class="btn btn-lg">Scrape</button>
-            </a>
-            <h2></h2>
+            <button class="btn btn-success btn-lg" id="scrapeWeb">Scrape</button>
+            <button class="btn btn-success btn-lg" id="viewSavedArticles">Saved Articles</button>
+            <button class="btn btn-success btn-lg" id="viewAllArticles">All Articles</button>
         </div>
-        <div id="articles"></div>
-        <div id="notes"></div>
+        <div class="row">
+            <div id="wrapper">
+                <div id="articles"></div>
+                <div id="savedArticles"></div>
+            </div>
+        </div>
+
+        <!-- Modal to veiw notes -->
+        <div id="noteModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Notes</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <div id="notes"></div>
+                        <div id="newNote">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--end modal-->
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="app.js"></script>
