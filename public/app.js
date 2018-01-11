@@ -11,24 +11,22 @@ getArticles();
 
 // click function for saving article
 $(document).on("click", ".saveArticle", function() {
-    // Grab the id associated with button
+
     var thisId = $(this).attr("data-id");
 
-    // Run POST method
     $.ajax({
             method: "POST",
             url: "/saved/" + thisId,
         })
         .done(function(data) {
             console.log("article saved: " + data);
-            // location.reload();
         });
 });
 
 // click handler for scrape button
 $("#scrapeWeb").on("click", function() {
     $("#articles").empty();
-    // run a call to delete the articles
+
     $.ajax({
         method: "DELETE",
         url: "/articles/delete"
@@ -46,10 +44,10 @@ $("#scrapeWeb").on("click", function() {
 
 //click function for the all articles button
 $("#viewAllArticles").on("click", function() {
-    // hide the saved ones
+
     $("#savedArticles").hide();
     $("#articles").show();
-    // run getJson
+
     getArticles();
 });
 
@@ -67,10 +65,10 @@ $("#viewSavedArticles").on("click", function() {
     });
 });
 
+// click handler for deleting article on saved page.
 $("#deleteArticle").on("click", function() {
     var thisId = $(this).attr("data-id");
 
-    // POST ajax call
     $.ajax({
             method: "POST",
             url: "/deleteSaved/" + thisId,
