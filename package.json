@@ -1,5 +1,5 @@
 {
-  "name": "panthers-news-scraper",
+  "name": "scrapepanthersnewsapp",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ckontos/panthers-news-scraper.git"
+    "url": "git+https://github.com/ckontos/scrapepanthersnewsapp.git"
   },
   "author": "Dimitri Kontos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ckontos/panthers-news-scraper/issues"
+    "url": "https://github.com/ckontos/scrapepanthersnewsapp/issues"
   },
-  "homepage": "https://github.com/ckontos/panthers-news-scraper#readme"
+  "homepage": "https://github.com/ckontos/scrapepanthersnewsapp#readme"
 }
