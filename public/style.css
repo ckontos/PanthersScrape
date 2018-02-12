@@ -1,0 +1,35 @@
+.jumbotron {
+    text-align: center;
+}
+
+.card-body {
+    color: black;
+    opacity: .9;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav {
+    opacity: .9;
+    padding: 10px;
+}
+
+.noteTitle,
+.noteBody {
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+
+}
+
+#savedNotes {
+    margin-left: 20px;
+}
+
+#bodyinput {
+    width: 94%;
+}
+
+.link {
+    color: white;
+}

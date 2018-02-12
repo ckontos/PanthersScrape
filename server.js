@@ -21,14 +21,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_llkvhzb7:e699clnd1tqnujml6hvr0c4lav@ds245337.mlab.com:45337/heroku_llkvhzb7";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/articles";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-    useMongoClient: true
-});
+mongoose.connect(MONGODB_URI);
 
 ///////////// ********* ROUTES ********** /////////////////
 
@@ -75,7 +73,7 @@ app.get("/articles", function(req, res) {
 });
 
 //delete articles route ======================================================================================================
-app.delete("/articles/delete", function(req, res) {
+app.delete("/articles/deleteAll", function(req, res) {
     // Remove all the articles
     db.Article.remove({}).then(function(err) {
         res.json(err);

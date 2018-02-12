@@ -1,19 +1,20 @@
 {
-  "name": "scrapepanthersnewsapp",
+  "name": "panthers-news-scraper",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ckontos/PanthersScrape.git"
+    "url": "git+https://github.com/ckontos/panthers-news-scraper.git"
   },
   "author": "Dimitri Kontos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ckontos/PanthersScrape/issues"
+    "url": "https://github.com/ckontos/panthers-news-scraper/issues"
   },
-  "homepage": "https://github.com/ckontos/PanthersScrape#readme"
+  "homepage": "https://github.com/ckontos/panthers-news-scraper#readme"
 }
