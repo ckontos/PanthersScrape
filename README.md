@@ -17,4 +17,4 @@
     </ul>
 </p>
 
-<h5>Visit the site <a href="https://arcane-temple-16667.herokuapp.com/">here.  Go Panthers!</a></h5>
+<h5>Visit the site <a href="https://arcane-temple-16667.herokuapp.com/">here.</a>  Go Panthers!</h5>
